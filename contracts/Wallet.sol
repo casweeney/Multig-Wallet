@@ -1,5 +1,4 @@
-pragma solidity ^0.6.0;
-pragma experimental ABIEncoderV2;
+pragma solidity ^0.8.0;
 
 contract Wallet {
     address[] public approvers;
@@ -17,7 +16,7 @@ contract Wallet {
     mapping(address => mapping(uint256 => bool)) public approvals;
 
     // Set approvers addresses and quorum need to sign a transaction
-    constructor(address[] memory _approvers, uint256 _quorum) public {
+    constructor(address[] memory _approvers, uint256 _quorum) {
         approvers = _approvers;
         quorum = _quorum;
     }

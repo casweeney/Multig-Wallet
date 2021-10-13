@@ -35,7 +35,6 @@ const App = () => {
 
   const createTransfer = (transfer) => {
     wallet.methods.createTransfer(transfer.amount, transfer.to).send({from: accounts[0]});
-    setTransfers(...transfers, ...transfer);
   }
 
   const approveTransfer = (transferId) => {
